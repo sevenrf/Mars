@@ -1,0 +1,379 @@
+@font-face {
+	font-family: Gputeks;
+	src: url('font/Gputeks-Regular.woff') format('woff'), url('font/Gputeks-Regular.woff2') format('woff2');
+}
+*{
+	font-family: Gputeks;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 30px;
+}
+h1{
+	font-size: 6rem;
+}
+h2{
+	font-size: 2rem;
+}
+p{
+	font-size: 1rem;
+}
+nav{
+	background: #3E4761;
+	width: 120px;
+	height: calc(100vh - 80px);
+	margin: 40px 0;
+	position: fixed;
+	right: 0;
+	display: flex;
+	padding: 24px;
+	z-index: 999;
+}
+.nav_header{
+	color: white;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	font-size: 18px;
+	margin: auto;
+}
+.nav_section2{
+	margin-left: 70px;
+}
+.menuitems{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+.menuitem{
+	color: white;
+	text-decoration: none;
+	margin: 30px 0;
+	filter: blur(10px)
+}
+.menuitem:hover{
+	filter: blur(0);
+	transition: .5s;
+}
+nav:hover{
+	width: 440px;
+	transition: .4s;
+}
+header{
+	color: white;
+	height: 100vh;
+	background-color: #222735;
+	position: relative;
+}
+.head_content,.head_bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.head_bg{
+	z-index: 1;
+	overflow: hidden;
+}
+.head_content{
+	padding: 60px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+header h2{
+	font-weight: 300;
+}
+.head_button{
+	background: linear-gradient(90deg, #FFE600 0%, #FF6528 30.89%, #C82DFF 71.35%, #FFE600 100%);
+	animation: gradient 5s ease-in infinite;
+	background-size: 300%;
+	padding: 20px 80px;
+	color: white;
+	background-color: #39435E;
+	border: none;
+	font-size: 26px;
+	width: 440px;
+}
+.bg_rocket{
+	position: absolute;
+	left: 600px;
+	top: 535.1px;
+	animation: landing 10s ease-in 1 forwards;
+	z-index: 10;
+
+}
+.bg_planet{
+	position: absolute;
+	left: 868px;
+	top: 392.54px;
+
+}
+.about_planet{
+	height: 100vh;
+	background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
+	display: flex;
+}
+.left_section{
+	height: 100%;
+	width: 50%;
+	position: relative;
+}
+.right_section{
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.alien{
+	background: url('img/section-2-alien.svg') center/cover;
+	animation: alien_hide ease-in-out 2s infinite alternate;
+	width: 155px;
+	height: 197px;
+	position: absolute;
+	top: 367px;
+	left: 264px;
+}
+.alien_eye_img{
+	animation: alien_looks ease-in-out 2s infinite alternate;
+	position: absolute;
+	left: 70px;
+	top: 65px;
+}
+.planet_img{
+	height: 80%;
+	position: absolute;
+	left: 74px;
+	top: 108px;
+}
+.about_planet_header{
+	color: white;
+	margin-bottom: 30px;
+}
+.about_planet_text{
+	color: white;
+	width: 700px;
+}
+.expanding{
+	background: url('img/section-3-bg.svg') bottom/100% no-repeat, linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+	padding: 120px 60px
+}
+.expand_top{
+	height: 50%;
+}
+.expand_bottom{
+	height: 50%;
+}
+.expand_article{
+	display: flex;
+	flex-wrap: wrap;
+}
+.expand_header{
+	width: 100%;
+	color: white;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+.expand{
+	font-size: 24px;
+	width: 30%;
+	color: white;
+}
+ul{
+	width: 70%;
+	display: flex;
+	justify-content: space-evenly;
+}
+.listitem{
+	list-style: none;
+	color: white;
+	text-align: center;
+}
+.list_text{
+	font-size: 24px;
+}
+.alien_img{
+	height: 70%;
+}
+.rover{
+	height: 70%;
+}
+.animation{
+	height: 100vh;
+	background: #FFB762;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 100px;
+}
+.animation_header{
+	text-align: center;
+	width: 100%;
+}
+.white-orbit{
+	animation: mars_orbit 8s linear infinite;
+	height: 617px;
+	width: 617px;
+	border: white solid 5px;
+	border-radius: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.deimos{
+	position: absolute;
+	width: 60px;
+	left: 15%;
+	bottom: -3%;
+	animation: satellites 8s linear infinite;
+}
+.phobos{
+	width: 95px;
+	position: absolute;
+	left: -7.5%;
+	animation: satellites 8s linear infinite;
+}
+.deimos_header, .phobos_header{
+	font-weight: 100;
+	font-size: 1rem;
+}
+.earth{
+	height: 100vh;
+	position: relative;
+	background-color: #293246;
+}
+.earth_header{
+	background: url('img/section-5-bg-top.svg') center/cover no-repeat;
+	height: 331px;
+}
+.earth_content{
+	padding: 20px;
+	display: flex;
+	justify-content: flex-start;
+}
+.earth_text{
+	color: white;
+	font-size: 60px;
+	width: 65%;
+}
+.rocket_bg{
+	animation: rocket_landing 3s linear alternate infinite;
+	z-index: 100;
+	position: absolute;
+	left: 65%;
+	bottom: 38%;
+}
+.sign_in{
+	background: url('img/section-5-bg-bottom-earth.svg') bottom/cover no-repeat;
+	height: 301px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.sign_in_button{
+	background: linear-gradient(90deg, #FFE600 0%, #FF6528 30.89%, #C82DFF 71.35%, #FFE600 100%);
+	animation: gradient 5s ease-in infinite;
+	z-index: 200;
+	background-size: 300%;
+	position: relative;
+	top: 70px;
+	display: block;
+	margin: auto;
+	box-shadow: 0px 4px 20px 0px #000000A1;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 40px;
+	width: 927px;
+}
+footer{
+	background: #FFB876;
+	height: 377px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes landing{
+	0%{
+		top: 100%;
+		left: 0;
+		transform: rotate(90deg);
+	}
+	40%{
+		top: 30%;
+		left: 50%;
+		transform: rotate(45deg);
+	}
+	100%{
+		top: 40%;
+		left: 60%;
+		transform: rotate(0deg);
+	}
+}
+@keyframes gradient{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 300%;
+	}
+}
+@keyframes alien_hide{
+	0%{
+		transform: translateY(100%);
+	}
+
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes alien_looks{
+	0%{
+		transform: translateX(90%);
+	}
+	100%{
+		transform: translateX(-90%);
+	}
+}
+@keyframes mars_orbit{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes satellites{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-360deg);
+	}
+}
+@keyframes rocket_landing{
+	0%{
+		top: 20%;
+		left: 60%;
+		transform: rotate(180deg);
+	}
+	33%{
+		top: 30%;
+		transform: rotate(180deg);
+	}
+	66%{
+		transform: rotate(0deg);
+	}
+	100%{
+		left: 60%;
+		top: 70%;
+		transform: rotate(0deg);
+	}
+}
